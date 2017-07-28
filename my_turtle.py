@@ -1,6 +1,11 @@
 import turtle
 
-def draw_rect():
+def draw_rect(brad):
+	for x in range(1,5):
+		brad.forward(100)
+		brad.right(90)
+
+def draw_art():
 	window = turtle.Screen()
 	window.bgcolor("red")
 
@@ -8,15 +13,11 @@ def draw_rect():
 	brad.color("yellow")
 	brad.shape("turtle")
 	brad.speed(2)
-	brad.forward(100)
-	brad.right(90)
-	brad.forward(100)
-	brad.right(90)
-	brad.forward(100)
-	brad.right(90)
-	brad.forward(100)
-	brad.right(90)
+	
+	for x in xrange(1,37):
+		draw_rect(brad)
+		brad.right(10)
 
 	window.exitonclick()
 
-draw_rect()
+draw_art()
